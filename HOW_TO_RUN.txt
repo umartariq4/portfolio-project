@@ -1,0 +1,50 @@
+──────────────────────────────────────────────────────────────
+  Muhammad Umar Tariq — Django Portfolio
+  HOW TO RUN IN VS CODE
+──────────────────────────────────────────────────────────────
+
+STEP 1 — Open the folder in VS Code
+  File → Open Folder → select "portfolio_project"
+
+STEP 2 — Open the integrated terminal
+  View → Terminal  (or Ctrl+`)
+
+STEP 3 — Create & activate a virtual environment
+  python -m venv venv
+
+  Windows:   venv\Scripts\activate
+  Mac/Linux: source venv/bin/activate
+
+STEP 4 — Install dependencies
+  pip install -r requirements.txt
+
+STEP 5 — The database is already seeded (db.sqlite3 is included).
+         If you want to re-seed fresh data, run:
+  python manage.py seed_data
+
+STEP 6 — Run the development server
+  python manage.py runserver
+
+STEP 7 — Open your browser
+  http://127.0.0.1:8000
+
+──────────────────────────────────────────────────────────────
+  ADMIN PANEL
+  Create a superuser first:
+    python manage.py createsuperuser
+  Then visit: http://127.0.0.1:8000/admin
+──────────────────────────────────────────────────────────────
+
+FILE STRUCTURE
+  portfolio_project/   ← Django project settings & urls
+  bio/                 ← Bio model, views (main portfolio view)
+  education/           ← Education model & admin
+  skills/              ← SkillCategory + Skill models & admin
+  experience/          ← Experience model & admin
+  projects/            ← Project model & admin
+  templates/           ← index.html (single-page portfolio)
+  static/css/          ← style.css (dark minimal theme)
+  static/js/           ← main.js (scroll animations)
+  bio/management/commands/seed_data.py ← DB seeder
+
+──────────────────────────────────────────────────────────────
